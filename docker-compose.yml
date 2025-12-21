@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+#  merge2pdf:
+#    command: python -m debugpy --listen 0.0.0.0:5678 app_Merge2PDFhtmlNew.py
+#    ports:
+#      - "5678:5678"
+web:
+build: .
+ports:
+- "8000:8000"
+volumes:
+- .:/app
+environment:
+- AZURE_CLIENT_ID
+- AZURE_TENANT_ID
+- AZURE_CLIENT_SECRET
+
+
+
+
